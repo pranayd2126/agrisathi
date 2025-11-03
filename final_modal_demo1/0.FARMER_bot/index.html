@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Farmer Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar left-sidebar">
+            <h2>Chat History</h2>
+            <button id="new-chat-button">+ New Chat</button>
+            <div class="history-list">
+                <ul id="history-items-list">
+                    </ul>
+                <p id="no-history-message">No chat history yet</p>
+            </div>
+        </div>
+
+        <div class="chat-window">
+            <div class="chat-header">
+                <h1>AI Farmer Assistant <span class="status-online">• Online</span></h1>
+                <button id="clear-chat-button">Clear Chat</button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="welcome-message">
+                    <span>🌱</span>
+                    <h2>Welcome to AI Farmer Assistant!</h2>
+                    <p>Ask me anything about farming, crops, soil management, pest control, and more.</p>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="file" id="image-upload-input" accept="image/*" style="display: none;">
+                <button id="image-upload-button" title="Upload Image">📎</button>
+
+                <div class="input-wrapper">
+                    <input type="text" id="chat-input" placeholder="Type your farming question here...">
+                    <div id="image-preview-area" style="display: none;">
+                        <span id="image-filename"></span>
+                        <button id="remove-image-button" title="Remove Image">&times;</button>
+                    </div>
+                </div>
+
+                <button id="mic-button" title="Voice Input (Future Feature)">🎤</button>
+                <button id="send-button" title="Send Message">➤</button>
+            </div>
+            </div>
+
+        <div class="sidebar right-sidebar">
+            <h2>💡 Quick Questions</h2>
+            <div class="quick-questions-list">
+                <button class="quick-question-button">What crops grow best in monsoon season?</button>
+                <button class="quick-question-button">How to identify pest infestations?</button>
+                <button class="quick-question-button">Best fertilizers for wheat?</button>
+                <button class="quick-question-button">Irrigation scheduling tips</button>
+                <button class="quick-question-button">Soil testing procedures</button>
+                <button class="quick-question-button">Organic farming practices</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
