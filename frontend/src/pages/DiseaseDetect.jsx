@@ -152,8 +152,6 @@
 //   );
 // }
 
-
-
 //original 2
 // import React, { useState, useRef, useEffect } from "react";
 
@@ -196,7 +194,7 @@
 //         payload.imageBase64 = b64;
 //       }
 
-//       const res = await fetch("http://localhost:4000/api/chat", {
+//       const res = await fetch("https://agrisathi-fjls.onrender.com/api/chat", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(payload),
@@ -287,7 +285,6 @@
 //   );
 // }
 
-
 //original 3
 // import React, { useState, useRef, useEffect } from "react";
 
@@ -328,7 +325,7 @@
 //         payload.imageBase64 = b64;
 //       }
 
-//       const res = await fetch("http://localhost:4000/api/chat", {
+//       const res = await fetch("https://agrisathi-fjls.onrender.com/api/chat", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(payload),
@@ -488,7 +485,7 @@
 //         payload.imageBase64 = b64;
 //       }
 
-//       const res = await fetch("http://localhost:4000/api/chat", {
+//       const res = await fetch("https://agrisathi-fjls.onrender.com/api/chat", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(payload),
@@ -524,7 +521,7 @@
 //     setTranslating(true);
 
 //     try {
-//       const res = await fetch("http://localhost:4000/api/translate", {
+//       const res = await fetch("https://agrisathi-fjls.onrender.com/api/translate", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify({
@@ -741,7 +738,7 @@
 //         payload.imageBase64 = b64;
 //       }
 
-//       const res = await fetch("http://localhost:4000/api/chat", {
+//       const res = await fetch("https://agrisathi-fjls.onrender.com/api/chat", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(payload),
@@ -871,7 +868,6 @@
 //   );
 // }
 
-
 // original 6
 // import React, { useState, useRef, useEffect } from "react";
 
@@ -978,7 +974,7 @@
 //         payload.imageBase64 = b64;
 //       }
 
-//       const res = await fetch("http://localhost:4000/api/chat", {
+//       const res = await fetch("https://agrisathi-fjls.onrender.com/api/chat", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(payload),
@@ -1134,9 +1130,6 @@
 //   );
 // }
 
-
-
-
 // import React, { useState, useRef, useEffect } from "react";
 
 // export default function AgentChatbot() {
@@ -1226,7 +1219,7 @@
 //         payload.imageBase64 = b64;
 //       }
 
-//       const res = await fetch("http://localhost:4000/api/chat", {
+//       const res = await fetch("https://agrisathi-fjls.onrender.com/api/chat", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(payload),
@@ -1465,14 +1458,6 @@
 
 // export default DiseaseDetect.jsx;
 
-
-
-
-
-
-
-
-
 // import React, { useState, useEffect, useRef } from 'react';
 // import ChatInput from './ChatInput.jsx';
 // import './DiseaseDetect.css';
@@ -1520,10 +1505,10 @@
 //       setMessages(prev =>
 //         prev.map(msg =>
 //           msg.loading ? { sender: 'assistant', text: data.answer } : msg
-        
+
 //         )
 //       );
-     
+
 //     } catch (err) {
 //       setMessages(prev =>
 //         prev.map(msg =>
@@ -1563,13 +1548,7 @@
 //   );
 // };
 
-// export default DiseaseDetect; 
-
-
-
-
-
-
+// export default DiseaseDetect;
 
 // import React, { useState, useEffect, useRef } from 'react';
 // import ChatInput from './ChatInput.jsx';
@@ -1691,15 +1670,6 @@
 
 // export default DiseaseDetect;
 
-
-
-
-
-
-
-
-
-
 // import React, { useState, useEffect, useRef } from 'react';
 // import ChatInput from './ChatInput.jsx';
 // import './DiseaseDetect.css';
@@ -1810,8 +1780,6 @@
 // };
 
 // export default DiseaseDetect;
-
-
 
 // import React, { useState, useEffect, useRef } from 'react';
 // import ChatInput from './ChatInput.jsx';
@@ -1931,8 +1899,6 @@
 // };
 
 // export default DiseaseDetect;
-
-
 
 // import React, { useState, useEffect, useRef } from 'react';
 // import ChatInput from './ChatInput.jsx';
@@ -2195,8 +2161,6 @@
 
 // export default DiseaseDetect;
 
-
-
 import React, { useState, useEffect, useRef } from "react";
 import ChatInput from "./ChatInput.jsx";
 
@@ -2299,7 +2263,8 @@ const DiseaseDetect = ({
       {/* Header */}
       <div className="flex justify-between items-center bg-green-600 text-white px-5 py-3 rounded-t-xl">
         <h1 className="font-semibold text-lg flex items-center gap-2">
-          🌾 AI Farmer Assistant <span className="text-green-200 text-sm">• Online</span>
+          🌾 AI Farmer Assistant{" "}
+          <span className="text-green-200 text-sm">• Online</span>
         </h1>
         <button
           onClick={clearChat}
@@ -2318,9 +2283,7 @@ const DiseaseDetect = ({
               msg.sender === "user" ? "justify-end" : "justify-start"
             }`}
           >
-            {msg.sender === "assistant" && (
-              <div className="text-2xl">🤖</div>
-            )}
+            {msg.sender === "assistant" && <div className="text-2xl">🤖</div>}
             <div
               className={`max-w-xs md:max-w-sm px-4 py-3 rounded-2xl shadow-sm ${
                 msg.sender === "user"
@@ -2337,9 +2300,7 @@ const DiseaseDetect = ({
               )}
               <div className="whitespace-pre-wrap">{msg.text}</div>
             </div>
-            {msg.sender === "user" && (
-              <div className="text-2xl">🧑‍🌾</div>
-            )}
+            {msg.sender === "user" && <div className="text-2xl">🧑‍🌾</div>}
           </div>
         ))}
         <div ref={chatEndRef} />
@@ -2354,8 +2315,6 @@ const DiseaseDetect = ({
 };
 
 export default DiseaseDetect;
-
-
 
 // // DiseaseDetect.jsx
 // // DiseaseDetect.jsx
@@ -2531,7 +2490,6 @@ export default DiseaseDetect;
 // };
 
 // export default DiseaseDetect;
-
 
 // import React, { useState, useEffect, useRef } from "react";
 // import ChatInput from "./ChatInput.jsx";

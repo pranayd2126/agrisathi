@@ -1,7 +1,7 @@
 // import React, { useState } from "react";
 // import "./Chatbot.css";
 
-// const BACKEND_URL = "http://localhost:4000/api/chatbot"; // Change if hosted elsewhere
+// const BACKEND_URL = "https://agrisathi-fjls.onrender.com/api/chatbot"; // Change if hosted elsewhere
 
 // const Chatbot = ({ pageName }) => {
 //   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,8 @@
 //     } catch (err) {
 //       console.error("Chatbot error:", err);
 //       setMessages((prev) => [
-//         ...prev,
+     //
+     //   const response = await axios.post("https://agrisathi-fjls.onrender.com/api/chat1", {
 //         { from: "bot", text: "⚠️ Connection error. Please try again." },
 //       ]);
 //     }
@@ -79,8 +80,6 @@
 // };
 
 // export default Chatbot;
-
-
 
 // original 1
 // import React, { useState, useRef, useEffect } from "react";
@@ -184,7 +183,6 @@
 // };
 
 // export default Chatbot;
-
 
 //original 2 with markdown support and Gemini API integration
 // import React, { useState, useRef, useEffect } from "react";
@@ -334,7 +332,7 @@
 
 //     try {
 //       // Call your backend
-//       const response = await axios.post("http://localhost:4000/api/chat1", {
+//       const response = await axios.post("https://agrisathi-fjls.onrender.com/api/chat1", {
 //         message: userMsg,
 //         pageName,
 //       });
@@ -411,7 +409,6 @@
 
 // export default Chatbot;
 
-
 import React, { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import "./Chatbot.css";
@@ -451,7 +448,7 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:4000/api/chat1", {
+      const response = await fetch("https://agrisathi-fjls.onrender.com/api/chat1", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMsg, pageName }),
@@ -465,7 +462,10 @@ const Chatbot = () => {
       console.error(error);
       setMessages((prev) => [
         ...prev,
-        { from: "bot", text: "⚠️ Could not connect to Gemini. Try again later." },
+        {
+          from: "bot",
+          text: "⚠️ Could not connect to Gemini. Try again later.",
+        },
       ]);
     } finally {
       setLoading(false);
@@ -525,8 +525,6 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
-
-
 
 // import React, { useState } from "react";
 
